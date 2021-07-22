@@ -1,8 +1,11 @@
 version: 0.2
+
 phases:
   build:
-    run-as: Linux-user-name
-    on-failure: ABORT | CONTINUE
     commands:
-      - command
-      - command
+      - echo Entered the build phase...
+      - echo Build started on `date`
+
+artifacts:
+   files:
+     - '**/*'
