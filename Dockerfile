@@ -13,5 +13,10 @@ ENV MODEL_FILE_NN=clf_nn.joblib
 
 COPY python_test.py ./python_test.py
 
+COPY train.csv ./train.csv
+COPY test.csv ./test.csv
+
+COPY train-nn.py ./train-nn.py
+
 # Run python scripts 
 RUN python3 python_test.py
