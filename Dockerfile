@@ -1,5 +1,6 @@
 FROM python:3.6
 MAINTAINER Sitanshu Tripathi "sitstripathi10@gmail.com"
+FROM jupyter/scipy-notebook
 
 # install build utilities 
 RUN pip install joblib
