@@ -11,7 +11,7 @@ ENV MODEL_FILE_LDA=clf_lda.joblib
 ENV MODEL_FILE_NN=clf_nn.joblib
 
 
-COPY python_test.txt ./python_test.txt
+COPY python_test.py ./python_test.py
 
 # Run python scripts 
 RUN python3 python_test.py
