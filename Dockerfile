@@ -5,12 +5,13 @@ FROM jupyter/scipy-notebook
 # install build utilities 
 RUN pip install joblib
 
-# check our python environment
-RUN python3 –version
-RUN pip3 –version
+RUN mkdir my-model
+ENV MODEL_DIR=/home/ec2-user/my-model
+ENV MODEL_FILE_LDA=clf_lda.joblib
+ENV MODEL_FILE_NN=clf_nn.joblib
 
-# set the working directory for containers
-WORKDIR /usr/src/my-app-name
+
+COPY python_test.txt ./python_test.txt
 
 # Run python scripts 
 RUN python3 python_test.py
